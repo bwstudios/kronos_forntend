@@ -14,11 +14,11 @@ angular.module('kronosFrontendApp')
 
         producto.getProducts().then(function successCallback(response) {
             console.log(response);
-            // if (response.data.status) {
-            $scope.products = response.data.prodcutos;
-            /*} else {
+                if (response.data.status) {
+            $scope.products = response.data.productsArray;
+            } else {
 
-             }*/
+             }
         }, function errorCallback(response) {
 
         });

@@ -12,6 +12,8 @@ angular.module('kronosFrontendApp')
         // Service logic
         // ...
 
+        var cartR = [];
+
         var meaningOfLife = 42;
 
         // Public API here
@@ -27,6 +29,13 @@ angular.module('kronosFrontendApp')
                         //"content-type": "application/json"
                     }
                 });
+            },
+            getCart: function (cart) {
+                cartR.push(cart);
+                return cartR;
+            },
+            getCars: function () {
+                return cartR;
             }
         };
     });

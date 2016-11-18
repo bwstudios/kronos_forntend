@@ -24,7 +24,7 @@
                             <p class="lead">{{product.isInstock}}</p>
                         </div>-->
                         <div class="col-xs-12 col-md-4">
-                            <button class="btn btn-success" ng-click="">
+                            <button class="btn btn-success" ng-click="addCar(product.productoId)">
                                 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                             </button>
                         </div>
@@ -34,3 +34,4 @@
         </div>
     </div>
 </div>
+{{cartArray}}

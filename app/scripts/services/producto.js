@@ -36,6 +36,11 @@ angular.module('kronosFrontendApp')
             },
             getCars: function () {
                 return cartR;
+            },
+            removeCart: function (index) {
+                console.log(index);
+                cartR.splice(index, 1);
+                return cartR;
             }
         };
     });

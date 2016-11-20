@@ -14,8 +14,8 @@
         <div class="item  col-xs-4 col-lg-4" ng-repeat="product in products">
             <div class="thumbnail">
                 <span class="label label-info">{{product.Nombrecategoria}}</span>
-               <!-- <img class="group list-group-image" src="http://www.leroymerlin.es/img/r25/55/5501/550101/17312470/17312470_ls.jpg" alt=""/>-->
-                <img class="group list-group-image" src="{{product.image}}" alt=""/>
+               <img class="group list-group-image" src="http://www.leroymerlin.es/img/r25/55/5501/550101/17312470/17312470_ls.jpg" alt=""/>
+                <!--<img class="group list-group-image" src="{{product.image}}" alt=""/>-->
                 <div class="caption">
                     <h4 class="group inner list-group-item-heading">{{product.name}}</h4>
                     <p class="group inner list-group-item-text text-limit">{{product.description}}</p>
@@ -24,7 +24,7 @@
                             <p class="lead">{{product.isInstock}}</p>
                         </div>-->
                         <div class="col-xs-12 col-md-4">
-                            <button class="btn btn-success" ng-click="">
+                            <button class="btn btn-success" ng-click="addCar(product)">
                                 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
                             </button>
                         </div>
@@ -34,3 +34,4 @@
         </div>
     </div>
 </div>
+{{cartArray}}

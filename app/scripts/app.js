@@ -36,6 +36,21 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
     })
+      .when('/acercade', {
+        templateUrl: 'views/acercade.html',
+        controller: 'AcercadeCtrl',
+        controllerAs: 'acercade'
+      })
+      .when('/sedes', {
+        templateUrl: 'views/sedes.html',
+        controller: 'SedesCtrl',
+        controllerAs: 'sedes'
+      })
+      .when('/contactenos', {
+        templateUrl: 'views/contactenos.html',
+        controller: 'ContactenosCtrl',
+        controllerAs: 'contactenos'
+      })
       .otherwise({
         redirectTo: '/'
       });

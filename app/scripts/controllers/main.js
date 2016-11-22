@@ -13,7 +13,23 @@ angular.module('kronosFrontendApp')
 
         $scope.removeCar = function (index) {
             producto.removeCart(index);
-        }
+        };
 
+        $scope.basketCart = function (userData, cart) {
+            console.log(userData, cart);
+            producto.sendsalesCart(userData, cart).then(function successCallback(response) {
+                console.log(response);
+                if (response.data.status) {
+                    swal("Gracias!", "Pronto nos contactaremos contigo!", "success");
+
+                } else {
+                    swal("Ups!", "ha ocurrido un error, por favor intenta de nuevo!", "error")
+
+                }
+            }, function errorCallback(response) {
+                console.log(response);
+            });
+
+        };
 
     });

@@ -37,6 +37,7 @@ module.exports = function(config) {
       'bower_components/ez-plus/src/jquery.ez-plus.js',
       'bower_components/raty-fa/lib/jquery.raty-fa.js',
       'bower_components/bootstrap-touchspin/src/jquery.bootstrap-touchspin.js',
+      'bower_components/bootstrap-sweetalert/dist/sweetalert.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

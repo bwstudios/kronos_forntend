@@ -14,7 +14,6 @@ angular.module('kronosFrontendApp')
 
         var cartR = [];
 
-        var meaningOfLife = 42;
 
         // Public API here
         return {
@@ -31,14 +30,20 @@ angular.module('kronosFrontendApp')
                 });
             },
             getCart: function (cart) {
-                cartR.push(cart);
-                return cartR;
+                if (cartR.indexOf(cart) === -1){
+                    cartR.push(cart);
+                    //console.log(cartR);
+                    return cartR;
+                }else{
+                    return 0;
+                }
+
             },
             getCars: function () {
                 return cartR;
             },
             removeCart: function (index) {
-                console.log(index);
+                //console.log(index);
                 cartR.splice(index, 1);
                 return cartR;
             },

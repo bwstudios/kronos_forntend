@@ -25,11 +25,15 @@ angular.module('kronosFrontendApp')
         });
 
         $scope.addCar = function (idProducto) {
-            producto.getCart(idProducto);
+
+            if (producto.getCart(idProducto) === 0) {
+                swal("", "Este producto ya ha sido agregado al carrito!", "warning");
+            } else {
+                producto.getCart(idProducto);
+            }
         };
 
         $scope.cartArray = producto.getCars();
-
 
 
         //Template Properties

@@ -23,7 +23,7 @@ angular.module('kronosFrontendApp')
                     swal("Gracias!", "Pronto nos contactaremos contigo!", "success");
 
                 } else {
-                    swal("Ups!", "ha ocurrido un error, por favor intenta de nuevo!", "error")
+                    swal("Ups!", "ha ocurrido un error, por favor intenta de nuevo!", "error");
 
                 }
             }, function errorCallback(response) {

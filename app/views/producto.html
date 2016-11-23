@@ -38,7 +38,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr ng-repeat="cart in cartS track by $index">
+                                <tr ng-repeat="cart in cartS ">
                                     <td class="img-cart">
                                         <a href="detail.html">
                                             <img alt="Product" src="{{cart.image}}" class="img-thumbnail" width="50px" height="50px">
@@ -64,7 +64,7 @@
                 <!-- End Shopping Cart List -->
 
                 <button type="button" name="submit" class="btn btn-primary pull-right" ng-click="basketCart(salesCart, cartS)">Enviar
-                    solicitud</button>
+                    solicitud </button>
             </form>
 
         </div>

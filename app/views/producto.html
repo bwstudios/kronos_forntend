@@ -1,18 +1,22 @@
 <div class="container">
     <div class="col-md-12">
         <div class="form-area">
-            <form role="form">
+            <form name="basketCartForm" ng-submit="basketCart(salesCart, cartS)">
                 <br style="clear:both">
                 <h3 style="margin-bottom: 25px; text-align: center;">Solicitud de cotizacion</h3>
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : basketCartForm.name.$invalid && !basketCartForm.name.$pristine }">
                     <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" ng-model="salesCart.clientName" required>
+                    <p ng-show="basketCartForm.name.$invalid && !basketCartForm.name.$pristine" class="help-block"> se requiere un nombre</p>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : basketCartForm.email.$invalid && !basketCartForm.email.$pristine }">
                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="salesCart.clientEmail" required>
+                    <p ng-show="basketCartForm.email.$invalid && !basketCartForm.email.$pristine" class="help-block">Ingrese un email válido</p>
                 </div>
-                <div class="form-group">
+                <div class="form-group" ng-class="{ 'has-error' : basketCartForm.email.$invalid && !basketCartForm.email.$pristine }">
                     <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Teléfono" ng-model="salesCart.clientPhone"
                            required>
+                    <p ng-show="basketCartForm.mobile.$invalid && !basketCartForm.mobile.$pristine" class="help-block">se requiere un número de
+                        teléfono</p>
                 </div>
                 <div class="form-group">
                     <textarea class="form-control" type="textarea" id="message" placeholder="Comentarios" maxlength="5000" rows="3"
@@ -34,7 +38,7 @@
                                     <th>Cantidad</th>
                                     <!--<th>Unit price</th>
                                     <th>SubTotal</th>-->
-                                    <th>Action</th>
+                                    <th>Remover</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -47,7 +51,16 @@
                                     <td>
                                         <p><!--<a href="detail.html" class="d-block">-->{{ cart.description }}<!--</a>--></p>
                                     </td>
-                                    <td class="input-qty"><input type="number" min="1" max="999" value="1" ng-model="cart.quantity" class="form-control text-center" /></td>
+                                    <td>
+                                        <div class="form-group"ng-class="{ 'has-error' : basketCartForm.email.$invalid && !basketCartForm.email.$pristine }">
+                                            <input type="number" min="1" max="999" value="1" ng-model="cart.quantity" class="form-control text-center" />
+                                            <p ng-show="basketCartForm.mobile.$invalid && !basketCartForm.mobile.$pristine" class="help-block">debe
+                                                tener al menos uno
+                                            </p>
+                                            <!--<span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>-->
+                                        </div>
+                                    </td>
+                                    <!--<td class="input-qty"><input type="number" min="1" max="999" value="1" ng-model="cart.quantity" class="form-control text-center" /></td>-->
                                     <!--<td class="unit">$13.50</td>
                                     <td class="sub">$13.50</td>-->
                                     <td class="action">
@@ -63,8 +76,11 @@
                 </div>
                 <!-- End Shopping Cart List -->
 
-                <button type="button" name="submit" class="btn btn-primary pull-right" ng-click="basketCart(salesCart, cartS)">Enviar
+                <!--<button type="button" name="submit" class="btn btn-primary pull-right" ng-click="basketCart(salesCart, cartS)">Enviar
+                    solicitud </button>-->
+                <button type="submit" name="submit" class="btn btn-primary pull-right">Enviar
                     solicitud </button>
+
             </form>
 
         </div>
@@ -72,8 +88,6 @@
 
 
 </div>
-
-
 
 
 
@@ -269,7 +283,7 @@
   font-size: 20px;
 }
 
-.searchform  button:hover, 
+.searchform  button:hover,
 .searchform  button:focus{
     background-color:#FE980F;
 }
@@ -1285,7 +1299,6 @@ h2.title {
 
 
 </style>
-
 
 
 

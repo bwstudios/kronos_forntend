@@ -17,18 +17,22 @@ angular.module('kronosFrontendApp')
 
         $scope.basketCart = function (userData, cart) {
             console.log(userData, cart);
-            producto.sendsalesCart(userData, cart).then(function successCallback(response) {
-                console.log(response);
-                if (response.data.status) {
-                    swal("Gracias!", "Pronto nos contactaremos contigo!", "success");
 
-                } else {
-                    swal("Ups!", "ha ocurrido un error, por favor intenta de nuevo!", "error");
+            if ($scope.basketCartForm.$valid) {
+                producto.sendsalesCart(userData, cart).then(function successCallback(response) {
 
-                }
-            }, function errorCallback(response) {
-                console.log(response);
-            });
+                    console.log(response);
+                    if (response.data.status) {
+                        swal("Gracias!", "Pronto nos contactaremos contigo!", "success");
+
+                    } else {
+                        swal("Ups!", "ha ocurrido un error, por favor intenta de nuevo!", "error");
+
+                    }
+                }, function errorCallback(response) {
+                    console.log(response);
+                });
+            }
 
         };
 

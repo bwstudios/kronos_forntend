@@ -41,6 +41,29 @@ angular.module('kronosFrontendApp')
                 console.log(index);
                 cartR.splice(index, 1);
                 return cartR;
+            },
+
+            sendsalesCart: function (userData, cart) {
+                return $http({
+                    method: 'POST',
+                    url: 'http://distrinetapi.azurewebsites.net/web/app.php/api/productos/create_assist_sale',
+                    headers: {
+                        "Authorization": "Basic YnJhaW5fZnJlZXplX2FkbWluOjN3NXR1ZDEwNQ==",
+                        //"Access-control-allow-origin": "*"
+                        "content-type": "application/json"
+                    },
+                    data: {
+                        clientEmail: userData.clientEmail,
+                        clientLastName: "albeiro",
+                        clientName: userData.clientName,
+                        clientIdentification: "undefined",
+                        clientPhone: userData.clientPhone,
+                        observaciones: userData.observaciones,
+                        clientTown: "",
+                        clientIdentificationType: 1,
+                        productsArray: cart
+                    }
+                });
             }
         };
     });

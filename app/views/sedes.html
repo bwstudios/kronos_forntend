@@ -1,80 +1,84 @@
-<div class="container">
-    <div class="col-md-12">
-        <div class="form-area">
-            <form role="form">
-                <br style="clear:both">
-                <h3 style="margin-bottom: 25px; text-align: center;">Solicitud de cotizacion</h3>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" ng-model="salesCart.clientName" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="salesCart.clientEmail" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Teléfono" ng-model="salesCart.clientPhone"
-                           required>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Comentarios" maxlength="5000" rows="3"
-                              ng-model="salesCart.observaciones"></textarea>
-                    <!--<span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>-->
+
+<div class="col-sm-12">
+    <div class="blog-post-area">
+        <h2 class="title text-center">Visita nuestras sedes</h2>
+        <div class="single-blog-post">
+
+            <a href="">
+
+                <p>
+                    Distriherramientas a ampliado su cobertura a 3 diferentes lugares de Colombia, para así suplir las necesidades de nuestros clientes de forma más agil y segura.</p> <br>
+               
+            </a>
+            <div class="col-sm-4">
+                <h2 class="title text-center">MEDELLÍN</h2>
+                <p>
+
+                <h3>Distriherramientas S.A.S</h3></br>
+
+                Carrera 63D #42 B- 34</br>
+                Av. Bolivariana</br></p>
+
+                Teléfono: 351 06 52</br>
+                Celular: 317 893 90 49</br>
+                E-mail: distriherramientas@gmail.com</p> <br>
+
+                <p>
+            </div>
+            <div class="col-sm-4">
+                <h2 class="title text-center">CAUCASIA</h2>
+                <p>
+
+                <h3>Distriherramientas S.A.S</h3></br>
+
+                CL 30 Transv. 30 - 31 </br>
+                Barrio el Palmar por la bodega Pilsen</br></p>
+                Teléfono: 839 35 06</br>
+                Celular: 310 545 10 38</br>
+                E-mail: distriherramientas@gmail.com</p> <br>
+
+                <p>
+            </div>
+            <div class="col-sm-4">
+                <h2 class="title text-center">AMALFI</h2>
+                <p>
+
+
+                <h3>Distriherramientas S.A.S</h3></br>
+
+                Carrera Aranzasu 19 - 72</br>
+                Bajos del hotel Riachon</br></p>
+                Teléfono: 830 01 05</br>
+                Celular: 313 789 34 51</br>
+                E-mail: distriherramientas@gmail.com</p> <br>
+
+                <p>
+            </div>
+
+
+
+            <div class="pager-area">
+
+            </div>
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <div class="col-sm-9">
+
+                    </div>
+
                 </div>
 
-                </br>
-                <!-- Shopping Cart List -->
-                <div class="">
-                    <!--<div class="form-area"><!---->
-                        <br>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-cart">
-                                <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Descripción</th>
-                                    <th>Cantidad</th>
-                                    <!--<th>Unit price</th>
-                                    <th>SubTotal</th>-->
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr ng-repeat="cart in cartS">
-                                    <td class="img-cart">
-                                        <a href="detail.html">
-                                            <img alt="Product" src="{{cart.image}}" class="img-thumbnail" width="50px" height="50px">
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <p><!--<a href="detail.html" class="d-block">-->{{ cart.description }}<!--</a>--></p>
-                                    </td>
-                                    <td class="input-qty"><input type="number" min="1" max="999" value="1" ng-model="cart.quantity" class="form-control text-center" /></td>
-                                    <!--<td class="unit">$13.50</td>
-                                    <td class="sub">$13.50</td>-->
-                                    <td class="action">
-                                        <button class="btn btn-danger input-group-btn-vertical"
-                                                ng-click="removeCar($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>&nbsp;
-                                        <!--<a href="#" class="text-danger" data-toggle="tooltip" data-placement="top" data-original-title="Remove"><i class="fa fa-trash-o"></i></a>-->
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    <!--</div>-->
-                </div>
-                <!-- End Shopping Cart List -->
 
-                <button type="button" name="submit" class="btn btn-primary pull-right" ng-click="basketCart(salesCart, cartS)">Enviar
-                    solicitud</button>
-            </form>
 
+
+            </div>
         </div>
-    </div>
-
-
-</div>
+    </div><!--/blog-post-area-->
 
 
 
+</div><!--/Response-area-->
 
 
 <style type="text/css">
@@ -190,7 +194,7 @@
   overflow: hidden;
 }
 .address  img {
-    width:100%;
+	width:100%;
 }
 
 .address p {
@@ -222,15 +226,15 @@
 }
 
 .single-widget h2 i{
-    margin-right:15px;
+	margin-right:15px;
 }
 
 .single-widget ul li a{
-    color: #8C8C88;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 5px 0;
+	color: #8C8C88;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	padding: 5px 0;
 }
 
 .single-widget ul li a i {
@@ -238,8 +242,8 @@
 }
 
 .single-widget ul li a:hover{
-    background:none;
-    color:#FE980F;
+	background:none;
+	color:#FE980F;
 }
 
 
@@ -271,7 +275,7 @@
 
 .searchform  button:hover, 
 .searchform  button:focus{
-    background-color:#FE980F;
+	background-color:#FE980F;
 }
 
 .searchform p {
@@ -315,7 +319,7 @@
 }
 
 .carousel-indicators li.active {
-      background: #FE980F;
+	  background: #FE980F;
 }
 
 .item {
@@ -341,7 +345,7 @@
 }
 
 .item h1 span {
-    color:#FE980F;
+	color:#FE980F;
 }
 
 .item h2 {
@@ -354,10 +358,10 @@
 }
 
 .item  p {
-    color:#363432;
-    font-size:16px;
-    font-weight:300;
-    font-family: 'Roboto', sans-serif;
+	color:#363432;
+	font-size:16px;
+	font-weight:300;
+	font-family: 'Roboto', sans-serif;
 }
 
 .get {
@@ -410,46 +414,46 @@
 }
 
 .left-sidebar h2:after, h2.title:after{
-    content: " ";
-    position: absolute;
-    border: 1px solid #f5f5f5;
-    bottom:8px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    z-index: -2;
+	content: " ";
+	position: absolute;
+	border: 1px solid #f5f5f5;
+	bottom:8px;
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: -2;
 }
 
 .left-sidebar h2:before{
-    content: " ";
-    position: absolute;
-    background: #fff;
-    bottom: -6px;
-    width: 130px;
-    height: 30px;
-    z-index: -1;
-    left: 50%;
-    margin-left: -65px;
+	content: " ";
+	position: absolute;
+	background: #fff;
+	bottom: -6px;
+	width: 130px;
+	height: 30px;
+	z-index: -1;
+	left: 50%;
+	margin-left: -65px;
 }
 
 h2.title:before{
-    content: " ";
-    position: absolute;
-    background: #fff;
-    bottom: -6px;
-    width: 220px;
-    height: 30px;
-    z-index: -1;
-    left: 50%;
-    margin-left: -110px;
+	content: " ";
+	position: absolute;
+	background: #fff;
+	bottom: -6px;
+	width: 220px;
+	height: 30px;
+	z-index: -1;
+	left: 50%;
+	margin-left: -110px;
 }
 
 .category-products .panel {
-    background-color: #FFFFFF;
-    border: 0px;
-    border-radius: 0px;
-    box-shadow:none;
-    margin-bottom: 0px;
+	background-color: #FFFFFF;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow:none;
+	margin-bottom: 0px;
 }
 
 .category-products .panel-default .panel-heading {
@@ -568,7 +572,7 @@ h2.title:before{
 }
 
 .features_items{
-    overflow:hidden;
+	overflow:hidden;
 }
 
 
@@ -584,9 +588,9 @@ h2.title {
 }
 
 .product-image-wrapper{
-    border:1px solid #F7F7F5;
-    overflow: hidden;
-    margin-bottom:30px;
+	border:1px solid #F7F7F5;
+	overflow: hidden;
+	margin-bottom:30px;
 }
 
 .single-products {
@@ -600,16 +604,16 @@ h2.title {
 }
 
 .productinfo h2{
-    color: #FE980F;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+	color: #FE980F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
 }
 .product-overlay h2{
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
 }
 
 
@@ -701,7 +705,7 @@ h2.title {
 }
 
 .add-to-cart i{
-    margin-right:5px;
+	margin-right:5px;
 }
 
 .add-to-cart:hover {
@@ -722,12 +726,12 @@ h2.title {
 }
 
 .choose ul li a i{
-    margin-right:5px;
+	margin-right:5px;
 }
 
 .choose ul li a:hover{
-    background:none;
-    color:#FE980F;
+	background:none;
+	color:#FE980F;
 }
 
 .category-tab {
@@ -754,8 +758,8 @@ h2.title {
 }
 
 .category-tab ul  li  a:hover{
-    background:#FE980F;
-    color:#fff;
+	background:#FE980F;
+	color:#fff;
 }
 
 .nav-tabs  li.active  a, .nav-tabs  li.active  a:hover, .nav-tabs  li.active  a:focus {
@@ -816,7 +820,7 @@ h2.title {
 
 
 .our_partners ul li a:hover{
-    background:none;
+	background:none;
 }
 
 /*************************
@@ -872,8 +876,8 @@ h2.title {
 }
 
 .pagination  li  a:hover{
-    background:#FE980F;
-    color:#fff;
+	background:#FE980F;
+	color:#fff;
 }
 
 
@@ -883,7 +887,7 @@ h2.title {
 **************************/
 
 .product-details{
-    overflow:hidden;
+	overflow:hidden;
 }
 
 
@@ -929,7 +933,7 @@ h2.title {
 }
 
 #similar-product .carousel-inner .item{
-    padding-left:0px;
+	padding-left:0px;
 }
 
 #similar-product .carousel-inner .item img {
@@ -949,7 +953,7 @@ h2.title {
 }
 
 .item-control i:hover{
-    background:#ccccc6;
+	background:#ccccc6;
 }
 
 .product-information {
@@ -962,9 +966,9 @@ h2.title {
 }
 
 .newarrival{
-    position:absolute;
-    top:0;
-    left:0
+	position:absolute;
+	top:0;
+	left:0
 }
 
 .product-information h2 {
@@ -1039,8 +1043,8 @@ h2.title {
   padding-bottom: 10px;
 }
 .shop-details-tab .col-sm-12 {
-    padding-left: 0;
-    padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 
@@ -1053,7 +1057,7 @@ h2.title {
 }
 
 #reviews  ul  li {
-    display:inline-block;
+	display:inline-block;
 }
 
 #reviews ul li a {
@@ -1065,17 +1069,17 @@ h2.title {
 }
 
 #reviews ul li a i{
-    color:#FE980F;
-    padding-right:8px;
+	color:#FE980F;
+	padding-right:8px;
 }
 
 #reviews ul li a:hover{
-    background:#fff;
-    color:#FE980F;
+	background:#fff;
+	color:#FE980F;
 }
 
 #reviews p{
-    color:#363432;
+	color:#363432;
 }
 
 #reviews  form span {
@@ -1243,51 +1247,17 @@ h2.title {
 
 
 .or{
-    background: #FE980F;
-    border-radius: 40px;
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 75px;
-    text-align: center;
-    width: 50px;
-}
-
-
-.social-networks{
-  overflow: hidden;
-  text-align: center;
-}
-
-.social-networks ul {
-  margin-top: -5px;
-  padding: 0;
-  display: inline-block;
-}
-
-.social-networks ul li {
-  float: left;
-  text-decoration: none;
-  list-style: none;
-  margin-right: 20px;
-}
-
-.social-networks ul li:last-child{
-  margin-right: 0;
-}
-
-.social-networks ul li a {
-  color: #999;
-  font-size: 25px;
+	background: #FE980F;
+	border-radius: 40px;
+	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 75px;
+	text-align: center;
+	width: 50px;
 }
 
 
 </style>
-
-
-
-
-
-

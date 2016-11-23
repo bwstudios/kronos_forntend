@@ -1,81 +1,57 @@
-<div class="container">
-    <div class="col-md-12">
-        <div class="form-area">
-            <form role="form">
-                <br style="clear:both">
-                <h3 style="margin-bottom: 25px; text-align: center;">Solicitud de cotizacion</h3>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" ng-model="salesCart.clientName" required>
+<div class="col-sm-12">
+                <h2 class="title text-center">Acerca de nosotros</h2>
+
+                <div class="wrap">
+                    <div class="article">
+                        <h3>DISTRIHERRAMIENTAS S.A.S.</h3>
+
+                        <p><img class="circulo alignright wp-image-113" src="images/home/dh.jpg" alt="dh" width="156" height="156"></p>
+
+                        <p>Proveemos soluciones con materiales y herramientas de ferretería en general, máquina pesada y seguridad Industrial, apoyados en un amplio portafolio de productos nacionales e importados de las mejores marcas, excelente calidad y precios competitivos, ofreciendo así a nuestros clientes reducción en costos, tiempo y esfuerzos</p>
+
+                        <h3>¿QUÉ DISTRIBUIMOS?</h3>
+                        <p>Distriherramientas es una empresa dedicada a la comercialización de productos para el sector minero y la construcción (soldadores, motores y repuestos), productos de ferretería y seguridad industrial.</p>
+                        <p>El público objetivo son los mineros, las constructoras y demás personas pertenecientes a este sector, público en general.</p>
+
+                        <p>&nbsp;</p>
+
+                        <p><img class="aligncenter wp-image-114 size-full" src="images/home/dh2.jpg" alt="Sin-título-1" width="850" height="236"></p>
+
+                        <h3>MISIÓN</h3>
+                        <p>Proveer soluciones con materiales y herramientas de ferretería&nbsp; en general, maquinaria pesada y&nbsp; seguridad industrial, apoyados en un&nbsp; amplio portafolio de productos nacionales e importados de&nbsp; las mejores marcas, excelente calidad y precios competitivos, ofreciendo así a&nbsp; nuestros clientes reducción en costos, tiempo y esfuerzos.</p>
+
+                        <h3>VISIÓN</h3>
+
+                        <p>Ser reconocidos como distribuidores líderes en proveer soluciones integrales a las&nbsp; necesidades de sus clientes,&nbsp; mediante la comercialización de productos y servicios complementarios y de calidad, ajustados a los cambios del mercado e innovación permanente, apoyados por personal altamente comprometido y&nbsp; competente que nos garantice solidez financiera y crecimiento sostenible.</p>
+
+                        <h3>VALORES</h3>
+
+                        <p>Los valores que rigen nuestra compañía son:</p>
+
+                        <h4>Somos Pasión</h4>
+                        <ul>
+                            <li><strong>Energía</strong>:&nbsp;Trabajamos con buena actitud disfrutando lo que hacemos, somos alegres y positivos, contagiamos de ánimo a todos los que nos rodean.</li>
+                            <li><strong>Oportunos:</strong>&nbsp;Somos responsables y tenemos la convicción de entregar siempre lo mejor de una manera eficiente y dinámica. Trabajamos con la razón y el corazón.</li>
+                            <li><strong>Servicio:&nbsp;</strong>Atendemos y solucionamos de manera oportuna, reflejando la calidad de nuestro equipo de trabajo ofreciendo una atención esmerada a nuestros clientes</li>
+                        </ul>
+                        <h4>Somos logro</h4>
+                        <ul>
+                            <li><strong>Excelencia:&nbsp;</strong>Buscamos la excelencia en el logro de objetivos, lo que nos demanda calidad, esfuerzo, empeño y coraje para lograr resultados exitosos</li>
+                            <li><strong>Proyección:&nbsp;</strong>Logramos resultados porque visualizamos nuestros retos. Construimos El futuro de una manera sistemática trabajando en equipos de alto desempeño.</li>
+                            <li><strong>Acertividad:</strong>&nbsp;Nos comunicamos con fluidez y somos empáticos al escuchar, aprendemos a diario del experiencia de nuestros clientes y compañeros.</li>
+                        </ul>
+                        <h4>Somos integridad</h4>
+                        <ul>
+                            <li><strong>Honestidad:</strong>&nbsp;Procedemos con transparencia, ética y buena fe en nuestras actividades diarias.</li>
+                            <li><strong>Calidad:</strong>&nbsp;Hacemos las cosas bien desde el principio, respetamos las políticas, procesos y estándares de la compañía y del entorno.</li>
+                            <li><strong>Responsabilidad:&nbsp;</strong>Somos sensibles por el medio ambiente, aportamos con empeño para desarrollar la comunidad y lograr el crecimiento sostenible de nuestra compañía</li> <br>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="salesCart.clientEmail" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Teléfono" ng-model="salesCart.clientPhone"
-                           required>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" type="textarea" id="message" placeholder="Comentarios" maxlength="5000" rows="3"
-                              ng-model="salesCart.observaciones"></textarea>
-                    <!--<span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>-->
-                </div>
-
-                </br>
-                <!-- Shopping Cart List -->
-                <div class="">
-                    <!--<div class="form-area"><!---->
-                        <br>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-cart">
-                                <thead>
-                                <tr>
-                                    <th>Producto</th>
-                                    <th>Descripción</th>
-                                    <th>Cantidad</th>
-                                    <!--<th>Unit price</th>
-                                    <th>SubTotal</th>-->
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr ng-repeat="cart in cartS">
-                                    <td class="img-cart">
-                                        <a href="detail.html">
-                                            <img alt="Product" src="{{cart.image}}" class="img-thumbnail" width="50px" height="50px">
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <p><!--<a href="detail.html" class="d-block">-->{{ cart.description }}<!--</a>--></p>
-                                    </td>
-                                    <td class="input-qty"><input type="number" min="1" max="999" value="1" ng-model="cart.quantity" class="form-control text-center" /></td>
-                                    <!--<td class="unit">$13.50</td>
-                                    <td class="sub">$13.50</td>-->
-                                    <td class="action">
-                                        <button class="btn btn-danger input-group-btn-vertical"
-                                                ng-click="removeCar($index)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>&nbsp;
-                                        <!--<a href="#" class="text-danger" data-toggle="tooltip" data-placement="top" data-original-title="Remove"><i class="fa fa-trash-o"></i></a>-->
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    <!--</div>-->
-                </div>
-                <!-- End Shopping Cart List -->
-
-                <button type="button" name="submit" class="btn btn-primary pull-right" ng-click="basketCart(salesCart, cartS)">Enviar
-                    solicitud</button>
-            </form>
-
-        </div>
-    </div>
-
-
-</div>
-
-
-
-
+            </div>
 
 <style type="text/css">
 
@@ -190,7 +166,7 @@
   overflow: hidden;
 }
 .address  img {
-    width:100%;
+	width:100%;
 }
 
 .address p {
@@ -222,15 +198,15 @@
 }
 
 .single-widget h2 i{
-    margin-right:15px;
+	margin-right:15px;
 }
 
 .single-widget ul li a{
-    color: #8C8C88;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 5px 0;
+	color: #8C8C88;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	padding: 5px 0;
 }
 
 .single-widget ul li a i {
@@ -238,8 +214,8 @@
 }
 
 .single-widget ul li a:hover{
-    background:none;
-    color:#FE980F;
+	background:none;
+	color:#FE980F;
 }
 
 
@@ -271,7 +247,7 @@
 
 .searchform  button:hover, 
 .searchform  button:focus{
-    background-color:#FE980F;
+	background-color:#FE980F;
 }
 
 .searchform p {
@@ -315,7 +291,7 @@
 }
 
 .carousel-indicators li.active {
-      background: #FE980F;
+	  background: #FE980F;
 }
 
 .item {
@@ -341,7 +317,7 @@
 }
 
 .item h1 span {
-    color:#FE980F;
+	color:#FE980F;
 }
 
 .item h2 {
@@ -354,10 +330,10 @@
 }
 
 .item  p {
-    color:#363432;
-    font-size:16px;
-    font-weight:300;
-    font-family: 'Roboto', sans-serif;
+	color:#363432;
+	font-size:16px;
+	font-weight:300;
+	font-family: 'Roboto', sans-serif;
 }
 
 .get {
@@ -410,46 +386,46 @@
 }
 
 .left-sidebar h2:after, h2.title:after{
-    content: " ";
-    position: absolute;
-    border: 1px solid #f5f5f5;
-    bottom:8px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    z-index: -2;
+	content: " ";
+	position: absolute;
+	border: 1px solid #f5f5f5;
+	bottom:8px;
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: -2;
 }
 
 .left-sidebar h2:before{
-    content: " ";
-    position: absolute;
-    background: #fff;
-    bottom: -6px;
-    width: 130px;
-    height: 30px;
-    z-index: -1;
-    left: 50%;
-    margin-left: -65px;
+	content: " ";
+	position: absolute;
+	background: #fff;
+	bottom: -6px;
+	width: 130px;
+	height: 30px;
+	z-index: -1;
+	left: 50%;
+	margin-left: -65px;
 }
 
 h2.title:before{
-    content: " ";
-    position: absolute;
-    background: #fff;
-    bottom: -6px;
-    width: 220px;
-    height: 30px;
-    z-index: -1;
-    left: 50%;
-    margin-left: -110px;
+	content: " ";
+	position: absolute;
+	background: #fff;
+	bottom: -6px;
+	width: 220px;
+	height: 30px;
+	z-index: -1;
+	left: 50%;
+	margin-left: -110px;
 }
 
 .category-products .panel {
-    background-color: #FFFFFF;
-    border: 0px;
-    border-radius: 0px;
-    box-shadow:none;
-    margin-bottom: 0px;
+	background-color: #FFFFFF;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow:none;
+	margin-bottom: 0px;
 }
 
 .category-products .panel-default .panel-heading {
@@ -568,7 +544,7 @@ h2.title:before{
 }
 
 .features_items{
-    overflow:hidden;
+	overflow:hidden;
 }
 
 
@@ -584,9 +560,9 @@ h2.title {
 }
 
 .product-image-wrapper{
-    border:1px solid #F7F7F5;
-    overflow: hidden;
-    margin-bottom:30px;
+	border:1px solid #F7F7F5;
+	overflow: hidden;
+	margin-bottom:30px;
 }
 
 .single-products {
@@ -600,16 +576,16 @@ h2.title {
 }
 
 .productinfo h2{
-    color: #FE980F;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+	color: #FE980F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
 }
 .product-overlay h2{
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
 }
 
 
@@ -701,7 +677,7 @@ h2.title {
 }
 
 .add-to-cart i{
-    margin-right:5px;
+	margin-right:5px;
 }
 
 .add-to-cart:hover {
@@ -722,12 +698,12 @@ h2.title {
 }
 
 .choose ul li a i{
-    margin-right:5px;
+	margin-right:5px;
 }
 
 .choose ul li a:hover{
-    background:none;
-    color:#FE980F;
+	background:none;
+	color:#FE980F;
 }
 
 .category-tab {
@@ -754,8 +730,8 @@ h2.title {
 }
 
 .category-tab ul  li  a:hover{
-    background:#FE980F;
-    color:#fff;
+	background:#FE980F;
+	color:#fff;
 }
 
 .nav-tabs  li.active  a, .nav-tabs  li.active  a:hover, .nav-tabs  li.active  a:focus {
@@ -816,7 +792,7 @@ h2.title {
 
 
 .our_partners ul li a:hover{
-    background:none;
+	background:none;
 }
 
 /*************************
@@ -872,8 +848,8 @@ h2.title {
 }
 
 .pagination  li  a:hover{
-    background:#FE980F;
-    color:#fff;
+	background:#FE980F;
+	color:#fff;
 }
 
 
@@ -883,7 +859,7 @@ h2.title {
 **************************/
 
 .product-details{
-    overflow:hidden;
+	overflow:hidden;
 }
 
 
@@ -929,7 +905,7 @@ h2.title {
 }
 
 #similar-product .carousel-inner .item{
-    padding-left:0px;
+	padding-left:0px;
 }
 
 #similar-product .carousel-inner .item img {
@@ -949,7 +925,7 @@ h2.title {
 }
 
 .item-control i:hover{
-    background:#ccccc6;
+	background:#ccccc6;
 }
 
 .product-information {
@@ -962,9 +938,9 @@ h2.title {
 }
 
 .newarrival{
-    position:absolute;
-    top:0;
-    left:0
+	position:absolute;
+	top:0;
+	left:0
 }
 
 .product-information h2 {
@@ -1039,8 +1015,8 @@ h2.title {
   padding-bottom: 10px;
 }
 .shop-details-tab .col-sm-12 {
-    padding-left: 0;
-    padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 
@@ -1053,7 +1029,7 @@ h2.title {
 }
 
 #reviews  ul  li {
-    display:inline-block;
+	display:inline-block;
 }
 
 #reviews ul li a {
@@ -1065,17 +1041,17 @@ h2.title {
 }
 
 #reviews ul li a i{
-    color:#FE980F;
-    padding-right:8px;
+	color:#FE980F;
+	padding-right:8px;
 }
 
 #reviews ul li a:hover{
-    background:#fff;
-    color:#FE980F;
+	background:#fff;
+	color:#FE980F;
 }
 
 #reviews p{
-    color:#363432;
+	color:#363432;
 }
 
 #reviews  form span {
@@ -1243,51 +1219,17 @@ h2.title {
 
 
 .or{
-    background: #FE980F;
-    border-radius: 40px;
-    color: #FFFFFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    height: 50px;
-    line-height: 50px;
-    margin-top: 75px;
-    text-align: center;
-    width: 50px;
-}
-
-
-.social-networks{
-  overflow: hidden;
-  text-align: center;
-}
-
-.social-networks ul {
-  margin-top: -5px;
-  padding: 0;
-  display: inline-block;
-}
-
-.social-networks ul li {
-  float: left;
-  text-decoration: none;
-  list-style: none;
-  margin-right: 20px;
-}
-
-.social-networks ul li:last-child{
-  margin-right: 0;
-}
-
-.social-networks ul li a {
-  color: #999;
-  font-size: 25px;
+	background: #FE980F;
+	border-radius: 40px;
+	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 75px;
+	text-align: center;
+	width: 50px;
 }
 
 
 </style>
-
-
-
-
-
-

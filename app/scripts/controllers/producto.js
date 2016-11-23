@@ -30,6 +30,8 @@ angular.module('kronosFrontendApp')
 
         $scope.cartArray = producto.getCars();
 
+
+
         //Template Properties
         $('#list').click(function (event) {
             event.preventDefault();

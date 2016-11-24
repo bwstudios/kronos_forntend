@@ -12,8 +12,10 @@ angular.module('kronosFrontendApp')
 
         $scope.products = [];
         $scope.cartArray = [];
+        $scope.loading = true;
 
         producto.getProducts().then(function successCallback(response) {
+            $scope.loading = false;
             console.log(response);
             if (response.data.status) {
                 $scope.products = response.data.productsArray;

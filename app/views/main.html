@@ -11,6 +11,7 @@
         </div>
     </div>
     <div id="products" class="row list-group">
+        <div class="text-center" ng-show="loading"><img ng-src="https://media.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif"/></div>
         <div class="item  col-xs-4 col-lg-4" ng-repeat="product in products">
             <div class="thumbnail">
                 <span class="label label-info">{{product.Nombrecategoria}}</span>

@@ -12,21 +12,29 @@
         <br>
         <div class="row">
             <div class="col-sm-8">
-                <div class="contact-form">
+                <div class="contact-form" >
                     <h2 class="title text-center">CONTÁCTENOS POR CORREO</h2>
                     <div class="status alert alert-success" style="display: none"></div>
-                    <form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
-                        <div class="form-group col-md-6">
-                            <input type="text" name="name" class="form-control" required="required" placeholder="Nombre">
+                    <form id="main-contact-form" class="contact-form row" name="contactForm" method="post" ng-submit="contactUs(contactFormS)">
+                        <div class="form-group col-md-6" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }">
+                            <input type="text" name="name" class="form-control" required="required" placeholder="Nombre"
+                                   ng-model="contactFormS.clientName">
+                            <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">ingrese su nombre</p>
                         </div>
-                        <div class="form-group col-md-6">
-                            <input type="email" name="email" class="form-control" required="required" placeholder="Correo">
+                        <div class="form-group col-md-6" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+                            <input type="email" name="email" class="form-control" required="required" placeholder="Correo"
+                                   ng-model="contactFormS.clientEmail">
+                            <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">por favor ingrese un correo válido</p>
                         </div>
-                        <div class="form-group col-md-12">
-                            <input type="text" name="subject" class="form-control" required="required" placeholder="Asunto">
+                        <div class="form-group col-md-12" ng-class="{ 'has-error' : contactForm.subject.$invalid && !contactForm.subject.$pristine }">
+                            <input type="text" name="subject" class="form-control" required="required" placeholder="Asunto"
+                                   ng-model="contactFormS.subject">
+                            <p ng-show="contactForm.subject.$invalid && !contactForm.subject.$pristine" class="help-block">escriba un asunto</p>
                         </div>
-                        <div class="form-group col-md-12">
-                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Escriba su mensaje"></textarea>
+                        <div class="form-group col-md-12" class="form-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
+                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Escriba su mensaje"
+                                      ng-model="contactFormS.comments"></textarea>
+                            <p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block">escriba un mensaje</p>
                         </div>
                         <div class="form-group col-md-12">
                             <input type="submit" name="submit" class="btn btn-primary pull-right" value="Enviar">

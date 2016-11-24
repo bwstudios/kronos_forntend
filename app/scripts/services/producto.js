@@ -59,12 +59,12 @@ angular.module('kronosFrontendApp')
                     },
                     data: {
                         clientEmail: userData.clientEmail,
-                        clientLastName: "albeiro",
+                        clientLastName: null,
                         clientName: userData.clientName,
-                        clientIdentification: "undefined",
+                        clientIdentification: null,
                         clientPhone: userData.clientPhone,
                         observaciones: userData.observaciones,
-                        clientTown: "",
+                        clientTown: null,
                         clientIdentificationType: 1,
                         productsArray: cart
                     }
